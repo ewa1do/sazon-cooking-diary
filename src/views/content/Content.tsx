@@ -11,17 +11,7 @@ interface Bookmark {
 }
 
 export function Content() {
-    const { currentMeal, bookmarks, setBookmarks, setIsBookmarked, isBookmarked } =
-        useContext(MealContext);
-    // const currentMeal = context.currentMeal as Meal;
-    // const bookmarks = context.bookmarks;
-    // const setBookmarks = context.setBookmarks;
-
-    // const bookmarks: Bookmark[] = JSON.parse(localStorage.getItem("bookmarks" || "[]"));
-
-    // const [isBookmarked, setIsBookmarked] = useState<boolean>(
-    //     bookmarks?.some((recipe) => recipe.id === currentMeal.idMeal),
-    // );
+    const { currentMeal, setBookmarks, setIsBookmarked, isBookmarked } = useContext(MealContext);
 
     useEffect(() => {
         const storedBookmarks = JSON.parse(localStorage.getItem("bookmarks") || "[]");
